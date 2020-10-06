@@ -12,6 +12,6 @@ searchContainer.onload = function(){
             sourceSet = element[1];
             toggleFocus(item);
         };
-    })
+    });
 
 };
