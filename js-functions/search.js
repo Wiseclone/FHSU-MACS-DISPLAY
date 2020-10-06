@@ -1,5 +1,6 @@
 // Configuration variables
-searchables = [["Graduates", gradSet], ["Staff", staffSet]]
+searchables = [["Graduates", gradSet], ["Staff", staffSet]] // Lists that can be searched. [name, array]
+sourceSet // List to search through
 // Initialization functions
 searchContainer = document.getElementById("searchContainer");
 searchContainer.onload = function(){
@@ -9,10 +10,8 @@ searchContainer.onload = function(){
         item.innerText = element[0];
         item.onclick = function() {
             sourceSet = element[1];
+            toggleFocus(item);
         };
-    });
-
-    searchForm = document.createElement("FORM");
-    searchBar = document.createElement("INPUT");
+    })
 
 };
